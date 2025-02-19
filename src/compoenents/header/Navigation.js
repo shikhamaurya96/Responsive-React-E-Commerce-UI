@@ -1,21 +1,20 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { ShoppingCart } from "lucide-react";
 import { useSelector } from 'react-redux';
-import useFetchCategory from '../hooks/useFetchCategory';
+
 import SearchDropdown from '../card/search/SearchDropdown';
 
 const Navigation = () => {
-  const [searchInput,setSearchInput] = useState("")
   const cartItems = useSelector((state)=>state.myCartItems.cart);
-  const categoryList = useFetchCategory();
+  
   // const searchChangeHandler = (e)=>{
   //   searchInput(e.target.value)
 
   // }
   //console.log(cartItems)
   return (
-<nav className="bg-yellow-400 shadow-md px-6 py-2">
-      <div className="flex justify-between items-center max-w-7xl mx-auto w-full">
+<nav className="bg-yellow-400 shadow-md px-6 py-2 fixed top-0 left-0 w-full z-50  ">
+      <div className=" flex justify-between items-center max-w-7xl mx-auto w-full">
         
         
         <div className="text-xl font-bold text-gray-800">My Store</div>

@@ -51,7 +51,7 @@ const Home = () => {
   if (loading) return <p className='m-4 font-bold'>Loading...</p>
   if (error) return <p className='text-red-500 m-4'>Error: {error}</p>
   return (
-    <div className='m-0 p-4 bg-gray-300 grid grid-cols-2  sm:grid-cols-5 gap-4 relative'>
+    <div className='mt-16 p-4 bg-gray-300 grid grid-cols-2 sm:grid-cols-5 gap-4 relative'>
       {
         items.length !== 0 && items.map((item) => <div key={item.id} className=''><ItemCard item={item} handleProductDetail={handleModal} opacity={opacity} /></div>)
       }
@@ -61,7 +61,7 @@ const Home = () => {
 
       {
         selectedProduct && (
-          <div className='flex justify-center items-center fixed inset-4 md:inset-16'>
+          <div className='flex justify-center items-center fixed inset-4 md:inset-16 '>
             <div className='flex flex-col items-center gap-6 md:gap-8 md:flex-row bg-white shadow-lg rounded-lg p-4'>
               <div className='md:w-1/2 h-full'>
                 <img
