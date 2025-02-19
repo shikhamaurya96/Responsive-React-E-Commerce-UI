@@ -10,7 +10,7 @@ const useFetchCategory = () => {
             setCategoryList(category);
         }
         fetchCategory()
-    }, [categoryApi])
+    }, [])
     return categoryList
 }
 export default useFetchCategory;

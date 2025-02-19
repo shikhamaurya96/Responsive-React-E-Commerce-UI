@@ -25,7 +25,7 @@ const Home = () => {
       //fetch product with category
       fetchData(`${productsApi}/category/${category}`)
     }
-  }, [category])
+  }, [category,fetchData])
 
   async function handleModal(id) {
     try {
